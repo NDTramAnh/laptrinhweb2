@@ -31,7 +31,7 @@ class CrudUserController extends Controller
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->route('users.list')->with('success', 'Đăng nhập thành công!');
+            return redirect()->route('user.list')->with('success', 'Đăng nhập thành công!');
         }
         return back()->withErrors(['email' => 'Email hoặc mật khẩu không đúng']);
     }
@@ -67,7 +67,7 @@ class CrudUserController extends Controller
     public function readUser($id)
     {
         $user = User::findOrFail($id);
-        return view('users.show', compact('user'));
+        return view('crud_user.read', compact('user'));
     }
 
     // 6. Xóa người dùng
@@ -75,14 +75,14 @@ class CrudUserController extends Controller
     {
         $user = User::findOrFail($id);
         $user->delete();
-        return redirect()->route('users.list')->with('success', 'Xóa người dùng thành công!');
+        return redirect()->route('user.list')->with('success', 'Xóa người dùng thành công!');
     }
 
     // 7. Hiển thị form chỉnh sửa người dùng
     public function updateUser($id)
     {
         $user = User::findOrFail($id);
-        return view('users.edit', compact('user'));
+        return view('crud_user.update', compact('user'));
     }
 
     // 8. Xử lý cập nhật thông tin người dùng
