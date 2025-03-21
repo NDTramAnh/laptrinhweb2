@@ -1,0 +1,114 @@
+<!DOCTYPE html>  
+<html lang="vi">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Chi Tiết Người Dùng</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            background-color: #f0f0f0;  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            margin: 0;  
+            padding: 20px;  
+        }  
+        nav {  
+            background-color: #007bff;  
+            width: 100%;  
+            padding: 10px;  
+            color: white;  
+            text-align: left;  
+        }  
+        nav a {  
+            color: white;  
+            text-decoration: none;  
+            margin: 0 15px;  
+        }  
+        nav a:hover {  
+            color: red;  
+        }  
+        h2 {  
+            margin-top: 20px;  
+        }  
+        .user-detail-container {  
+            background-color: white;  
+            border-radius: 8px;  
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);  
+            padding: 20px;  
+            width: 300px;  
+            margin-top: 20px;  
+        }  
+        table {  
+            width: 100%;  
+            border-collapse: collapse;  
+        }  
+        th, td {  
+            padding: 8px;  
+            text-align: left;  
+        }  
+        th {  
+            background-color: #007bff;  
+            color: white;  
+        }  
+        footer {  
+            margin-top: 20px;  
+            text-align: center;  
+            font-size: 12px;  
+            color: #666;  
+            width: 100%;  
+            background-color: #ececec;  
+            position: absolute;  
+            bottom: 0;  
+            padding: 10px 0;  
+        }  
+        .edit-button {  
+            margin-top: 20px;  
+            display: block;  
+            text-align: center;  
+            padding: 10px;  
+            background-color: #007bff;  
+            color: white;  
+            border-radius: 4px;  
+            text-decoration: none;  
+        }  
+        .edit-button:hover {  
+            background-color: #0056b3;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+    <nav>  
+        <a href="index.html">Home</a>  
+        <a href="login.html">Đăng xuất</a>  
+    </nav>  
+
+    <h2>Chi Tiết Người Dùng</h2>  
+    <div class="user-detail-container">  
+        <table>  
+            <tr>  
+                <th>Thông tin</th>  
+                <th>Giá trị</th>  
+            </tr>  
+            <tr>  
+                <td>Username</td>  
+                <td>user1</td>  
+            </tr>  
+            <tr>  
+                <td>Email</td>  
+                <td>user1@example.com</td>  
+            </tr>  
+        </table>  
+        <a href="update.html" class="edit-button">Chỉnh sửa</a>  
+    </div>  
+
+   
+
+    <footer>  
+        Lập trình web @01/2024  
+    </footer>  
+
+</body>  
+</html>  

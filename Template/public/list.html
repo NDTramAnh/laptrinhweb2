@@ -1,0 +1,135 @@
+<!DOCTYPE html>  
+<html lang="vi">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Danh Sách</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            background-color: #f0f0f0;  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            margin: 0;  
+        }  
+        nav {  
+            background-color: #007bff;  
+            width: 100%;  
+            padding: 10px;  
+            color: white;  
+            text-align: left;  
+        }  
+        nav a {  
+            color: white;  
+            text-decoration: none;  
+            margin: 0 15px;  
+        }  
+        nav a:hover {  
+            color: red;  
+        }  
+        h2 {  
+            text-align: center;  
+            margin-top: 20px;  
+        }  
+        table {  
+            width: 80%;  
+            border-collapse: collapse;  
+            margin: 20px 0;  
+        }  
+        th, td {  
+            border: 1px solid #ccc;  
+            padding: 8px;  
+            text-align: center;  
+        }  
+        th {  
+            background-color: #007bff;  
+            color: white;  
+        }  
+        footer {  
+            margin-top: 20px;  
+            text-align: center;  
+            font-size: 12px;  
+            color: #666;  
+            width: 100%;  
+            background-color: #ececec;  
+            position: absolute;  
+            bottom: 0;  
+            padding: 10px 0;  
+        }  
+        .pagination {  
+            margin: 20px 0;  
+        }  
+        .pagination a {  
+            margin: 0 5px;  
+            text-decoration: none;  
+            color: #007bff;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+    <nav>  
+        <a href="index.html">Home</a>  
+        <a href="login.html">Đăng xuất</a>  
+    </nav>  
+
+    <h2>Danh Sách Người Dùng</h2>  
+    <table>  
+        <thead>  
+            <tr>  
+                <th>#</th>  
+                <th>Username</th>  
+                <th>Email</th>  
+                <th>Thao tác</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+            <tr>  
+                <td>1</td>  
+                <td>user1</td>  
+                <td>user1@example.com</td>  
+                <td>  
+                    <a href="#">Edit</a> |   
+                    <a href="#">View</a> |   
+                    <a href="#">Delete</a>  
+                </td>  
+            </tr>  
+            <tr>  
+                <td>2</td>  
+                <td>user2</td>  
+                <td>user2@example.com</td>  
+                <td>  
+                    <a href="#">Edit</a> |   
+                    <a href="#">View</a> |   
+                    <a href="#">Delete</a>  
+                </td>  
+            </tr>  
+            <tr>  
+                <td>3</td>  
+                <td>user3</td>  
+                <td>user3@example.com</td>  
+                <td>  
+                    <a href="#">Edit</a> |   
+                    <a href="#">View</a> |   
+                    <a href="#">Delete</a>  
+                </td>  
+            </tr>  
+            <!-- Thêm các hàng khác nếu cần -->  
+        </tbody>  
+    </table>  
+
+    <div class="pagination">  
+        <a href="#">« Trang trước</a>  
+        <a href="#">1</a>  
+        <a href="#">2</a>  
+        <a href="#">3</a>  
+        <a href="#">Trang sau »</a>  
+    </div>  
+
+    <footer>  
+        Lập trình web @01/2024  
+    </footer>  
+
+</body>  
+</html>  

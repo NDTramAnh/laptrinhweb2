@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            background-color: #007bff;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            text-align: left;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+        footer {
+            background-color: #ececec;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .login-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .Login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        input[type="text"], input[type="password"] {  
+            width: 65%;  
+            padding: 10px;  
+            border: 1px solid #ccc;  
+            border-radius: 4px;  
+        }            
+        button {  
+            padding: 10px;  
+            background-color: #007bff;  
+            color: white;  
+            border: none;  
+            border-radius: 4px;  
+            cursor: pointer;  
+            font-size: 16px;  
+        }  
+        button:hover {  
+            background-color: #0056b3;  
+        } 
+        .form-actions {
+            display: flex;
+            align-items: center;
+            /* Căn giữa theo chiều dọc */
+            width: 100%;
+            /* Đảm bảo chiếm toàn bộ chiều rộng */
+        }
+        .forgot-password {
+            margin-top: 30px;
+            margin-right: 5px;
+            margin-right: 30px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Đăng Nhập</a>
+            <a href="#">Đăng Ký</a>
+        </nav>
+    </div>
+    <div class="Login">
+        <div class="login-container">
+            <h2>Màn hình đăng nhập</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="" required>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Ghi nhớ đăng nhập</label>
+            </div>
+            <div class="form-actions">
+                <div class="forgot-password">
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+                <button type="submit">Đăng nhập</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Lập trình web @01/2024
+    </footer>
+</body>
+
+</html>
