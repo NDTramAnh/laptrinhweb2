@@ -1,0 +1,134 @@
+/* Màu nền tổng thể */
+body {
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand, .nav-link {
+    color: black !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: gray !important;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Card form */
+.signup-form {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Input */
+.form-group input {
+    background: #f5f5f5;
+    color: black;
+    border: 3px solid #000000;
+}
+
+.form-group input:focus {
+    border-color: black;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Button */
+.btn-dark {
+    background: black;
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-dark:hover {
+    background: #333;
+    color: white;
+}
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #bdbdbd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #eeeeee;
+}
+
+/* Danh sách */
+ul, ol {
+    padding-left: 20px;
+    color: #424242;
+}
+
+li {
+    margin-bottom: 5px;
+}/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #bdbdbd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #eeeeee;
+}
+
+/* Danh sách */
+ul, ol {
+    padding-left: 20px;
+    color: #424242;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
