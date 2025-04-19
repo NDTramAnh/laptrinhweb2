@@ -103,11 +103,13 @@ class CrudUserController extends Controller
     }
 
     // 9. Hiển thị danh sách người dùng
+    const MAX_RECORDS = 10;
     public function listUser()
     {
-        $users = \App\Models\User::all();
-
-        // Trả về view hiển thị danh sách user
+        // Sử dụng eager loading để load roles của mỗi user
+        $users = \App\Models\User::with('role')->paginate(self::MAX_RECORDS);
+    
+        // Trả về view hiển thị danh sách user;
         return view('crud_user.list', compact('users'));
     }
 
