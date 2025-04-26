@@ -10,6 +10,7 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Order</th>
                             <th>role</th>
                             <th>Action</th>
                         </tr>
@@ -20,6 +21,15 @@
                                 <th>{{ $user->id }}</th>
                                 <th>{{ $user->name }}</th>
                                 <th>{{ $user->email }}</th>
+                                <th> 
+                                @if($user->orders->count() > 0)
+                                <a href="{{ route('user.orders', ['user' => $user->id]) }}">
+                                    {{ $user->orders->count() }} orders
+                                </a>
+                                @else
+                                <span class="text-muted">No orders</span>
+                                @endif
+                                </th>
                                 <th> 
                                 @foreach($user->role as $role)
                                 <a href="{{ route('user.role', ['id' => $role->id]) }}">

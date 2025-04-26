@@ -106,11 +106,12 @@ class CrudUserController extends Controller
     const MAX_RECORDS = 10;
     public function listUser()
     {
-        // Sử dụng eager loading để load roles của mỗi user
-        $users = \App\Models\User::with('role')->paginate(self::MAX_RECORDS);
+        if(Auth::check()) {
+            $users = User::with(['role', 'orders'])->paginate(self::MAX_RECORDS);  // <-- Thêm with()
+            return view('crud_user.list', ['users' => $users]);
+        }
     
-        // Trả về view hiển thị danh sách user;
-        return view('crud_user.list', compact('users'));
+        return redirect("login")->withSuccess('You are not allowed to access');
     }
 
     // 10. Đăng xuất người dùng
@@ -118,5 +119,11 @@ class CrudUserController extends Controller
     {
         Auth::logout();
         return redirect()->route('login')->with('success', 'Đã đăng xuất!');
+    }
+    
+    public function showOrders(User $user)
+    {
+        $user->load('orders.orderDetails.product'); // load cả chi tiết đơn và sản phẩm
+        return view('order.order', compact('user'));
     }
 }
